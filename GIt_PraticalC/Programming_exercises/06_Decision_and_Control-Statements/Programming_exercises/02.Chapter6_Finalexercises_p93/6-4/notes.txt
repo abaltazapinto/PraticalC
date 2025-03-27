@@ -20,3 +20,19 @@ Purpose : Learning about the use of modulus.
 
 		return 0;
 }
+
+
+Now i discoved another issue. 
+
+with scanf im not abkle to scan the float. 
+
+i need another way to do the same thing. 
+
+
+another trick that i learned is the problems of using flloating points , then we need to convert first to ints.
+
+to convert 
+
+cents = (int)(money * 100 + 0.5) //adding the 0.5 to handle rounding properly
+
+
