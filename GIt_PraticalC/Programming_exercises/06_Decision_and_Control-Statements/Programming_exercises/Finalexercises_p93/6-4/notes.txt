@@ -1,0 +1,22 @@
+Purpose : Learning about the use of modulus.
+
+	the modulus operator in C just workk with integers, long , etc) not floating point numbers (float or double).
+
+	How to fix that?
+
+	> Since you are working with money, which likely involves decimals, you can use gmod function from <math.h> instead of %.
+
+	Example:
+
+	#include <stdio.h>
+	#include <math.h>
+
+	int main()
+	{
+		float money = 20.5;
+
+		if (fmod(money, 10) == 0)
+			printf("The value is a multiple of 10. \n);
+
+		return 0;
+}
