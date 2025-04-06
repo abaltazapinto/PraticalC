@@ -44,7 +44,7 @@ int	days_needed_to_transmit_file(long MB)
 	long bytes_per_hour = 960.0 * 3600.0; // 3 456 000 B / hour
 	long bytes_per_day = bytes_per_hour * 24;
 	long file_bytes = MB * 1024 * 1204; // CONVERT MB to BYTES
-	double days = (double) filebytes / bytes_perday;
+	double days = (double) file_bytes / bytes_per_day;
 	return days;
 }	
 
@@ -54,7 +54,8 @@ int	main()
 	{
 		long file_size_mb;
 		puts("How many mega bytes has your file?");
-		scanf("%lf", &file_size_mb);
+		scanf("%ld", &file_size_mb);
 		double days = days_needed_to_transmit_file(file_size_mb);
-	printf("For transmitting %ld MB of memory it will need **%.2f days**.", file_size_mb, days);
+	printf("\n\tFor transmitting %ld MB of memory it will need **%.2f days**.", file_size_mb, days);
+	}
 }
